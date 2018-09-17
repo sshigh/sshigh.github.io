@@ -329,9 +329,30 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/09/06/poj 1270 Following Orders/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/09/06/poj 1270 Following Orders/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
+          
+             <span id="/2018/09/06/poj 1270 Following Orders/" class="leancloud_visitors" data-flag-title="poj 1270 Following Orders">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
           
 
           
@@ -356,7 +377,7 @@
         <p>#<strong>题解</strong><br>  拓扑排序裸题<br>  跟poj1128实际上差不多<br>  但是上一题的建图还要更加的复杂<br>  这道题的建图就比较裸一点<br>  因为是按照字典序输出的，所以要用dfs()<br>  具体看代码就行</p>
 <p>#<strong>链接</strong><a href="">poj 1270</a></p>
 <p>#<strong>代码</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;cstdio&gt;</span><br><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;stack&gt;</span><br><span class="line">#include &lt;cstring&gt;</span><br><span class="line">#include &lt;vector&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">const int maxn=1010;</span><br><span class="line">char str[maxn];</span><br><span class="line">int totnum;</span><br><span class="line">int mp[maxn];</span><br><span class="line">int indegree[maxn];</span><br><span class="line">int n,m;</span><br><span class="line">char ans[maxn];</span><br><span class="line">vector&lt;int&gt;edge[maxn];</span><br><span class="line"></span><br><span class="line">void dfs(int len)</span><br><span class="line">    &#123;</span><br><span class="line">        if(len==totnum)</span><br><span class="line">            &#123;</span><br><span class="line">                ans[len]=&apos;\0&apos;;</span><br><span class="line">                printf(&quot;%s\n&quot;,ans);</span><br><span class="line">                return ;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        for (int i=0;i&lt;26;i++)</span><br><span class="line">            &#123;</span><br><span class="line">                if(indegree[i]==0)</span><br><span class="line">                    &#123;</span><br><span class="line">                        ans[len]=i+&apos;a&apos;;</span><br><span class="line">                        indegree[i]--;</span><br><span class="line">                        for (int j=0;j&lt;edge[i].size();j++)</span><br><span class="line">                            &#123;</span><br><span class="line">                                indegree[edge[i][j]]--;</span><br><span class="line">                            &#125;</span><br><span class="line">                        dfs(len+1);</span><br><span class="line">                        for (int j=0;j&lt;edge[i].size();j++)</span><br><span class="line">                            &#123;</span><br><span class="line">                                indegree[edge[i][j]]++;</span><br><span class="line">                            &#125;</span><br><span class="line">                        indegree[i]++;</span><br><span class="line">                    &#125;</span><br><span class="line">            &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">    &#123;</span><br><span class="line">        while (gets(str))</span><br><span class="line">            &#123;</span><br><span class="line">                memset(indegree,-1,sizeof(indegree));</span><br><span class="line">                for (int i=0;i&lt;=26;i++)</span><br><span class="line">                    edge[i].clear();</span><br><span class="line">                totnum=0;</span><br><span class="line">                int len=strlen(str);</span><br><span class="line">                int cnt=0;</span><br><span class="line">                for (int i=0;i&lt;len;i++)</span><br><span class="line">                    &#123;</span><br><span class="line">                        if(str[i]&gt;=&apos;a&apos; &amp;&amp; str[i]&lt;=&apos;z&apos;)</span><br><span class="line">                            &#123;</span><br><span class="line">                                mp[cnt++]=str[i]-&apos;a&apos;;</span><br><span class="line">                                indegree[str[i]-&apos;a&apos;]=0;</span><br><span class="line">                            &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                for (int i=0;i&lt;26;i++)</span><br><span class="line">                    &#123;</span><br><span class="line">                        if(indegree[i]==0)</span><br><span class="line">                            totnum++;</span><br><span class="line">                    &#125;</span><br><span class="line"></span><br><span class="line">                gets(str);</span><br><span class="line"></span><br><span class="line">                len=strlen(str);</span><br><span class="line">                cnt=0;</span><br><span class="line"></span><br><span class="line">                for (int i=0;i&lt;len;i++)</span><br><span class="line">                    &#123;</span><br><span class="line">                        if(str[i]&gt;=&apos;a&apos; &amp;&amp; str[i]&lt;=&apos;z&apos;)</span><br><span class="line">                            &#123;</span><br><span class="line">                                cnt++;</span><br><span class="line">                                if(cnt==2)</span><br><span class="line">                                    &#123;</span><br><span class="line">                                        cnt=0;</span><br><span class="line">                                        edge[str[i-2]-&apos;a&apos;].push_back(str[i]-&apos;a&apos;);</span><br><span class="line">                                        indegree[str[i]-&apos;a&apos;]++;</span><br><span class="line">                                    &#125;</span><br><span class="line">                            &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                dfs(0);</span><br><span class="line">                printf(&quot;\n&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight hsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> &lt;cstdio&gt;</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> &lt;iostream&gt;</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> &lt;stack&gt;</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> &lt;cstring&gt;</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> &lt;vector&gt;</span></span><br><span class="line">using namespace std<span class="comment">;</span></span><br><span class="line"></span><br><span class="line">const <span class="keyword">int</span> maxn=<span class="number">1010</span><span class="comment">;</span></span><br><span class="line">char <span class="keyword">str</span>[maxn]<span class="comment">;</span></span><br><span class="line"><span class="keyword">int</span> totnum<span class="comment">;</span></span><br><span class="line"><span class="keyword">int</span> mp[maxn]<span class="comment">;</span></span><br><span class="line"><span class="keyword">int</span> indegree[maxn]<span class="comment">;</span></span><br><span class="line"><span class="keyword">int</span> n,m<span class="comment">;</span></span><br><span class="line">char ans[maxn]<span class="comment">;</span></span><br><span class="line">vector&lt;<span class="keyword">int</span>&gt;edge[maxn]<span class="comment">;</span></span><br><span class="line"></span><br><span class="line">void dfs(<span class="keyword">int</span> len)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(len==totnum)</span><br><span class="line">            &#123;</span><br><span class="line">                ans[len]=<span class="string">'\0'</span><span class="comment">;</span></span><br><span class="line">                printf(<span class="string">"%s\n"</span>,ans)<span class="comment">;</span></span><br><span class="line">                <span class="keyword">return</span> <span class="comment">;</span></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span><span class="comment">;i&lt;26;i++)</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span>(indegree[i]==<span class="number">0</span>)</span><br><span class="line">                    &#123;</span><br><span class="line">                        ans[len]=i+<span class="string">'a'</span><span class="comment">;</span></span><br><span class="line">                        indegree[i]--<span class="comment">;</span></span><br><span class="line">                        <span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span><span class="comment">;j&lt;edge[i].size();j++)</span></span><br><span class="line">                            &#123;</span><br><span class="line">                                indegree[edge[i][j]]--<span class="comment">;</span></span><br><span class="line">                            &#125;</span><br><span class="line">                        dfs(len+<span class="number">1</span>)<span class="comment">;</span></span><br><span class="line">                        <span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span><span class="comment">;j&lt;edge[i].size();j++)</span></span><br><span class="line">                            &#123;</span><br><span class="line">                                indegree[edge[i][j]]++<span class="comment">;</span></span><br><span class="line">                            &#125;</span><br><span class="line">                        indegree[i]++<span class="comment">;</span></span><br><span class="line">                    &#125;</span><br><span class="line">            &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> main()</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">while</span> (gets(<span class="keyword">str</span>))</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">memset</span>(indegree,<span class="number">-1</span>,sizeof(indegree))<span class="comment">;</span></span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span><span class="comment">;i&lt;=26;i++)</span></span><br><span class="line">                    edge[i].clear()<span class="comment">;</span></span><br><span class="line">                totnum=<span class="number">0</span><span class="comment">;</span></span><br><span class="line">                <span class="keyword">int</span> len=<span class="keyword">strlen</span>(<span class="keyword">str</span>)<span class="comment">;</span></span><br><span class="line">                <span class="keyword">int</span> <span class="keyword">cnt</span>=<span class="number">0</span><span class="comment">;</span></span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span><span class="comment">;i&lt;len;i++)</span></span><br><span class="line">                    &#123;</span><br><span class="line">                        <span class="keyword">if</span>(<span class="keyword">str</span>[i]&gt;=<span class="string">'a'</span> &amp;&amp; <span class="keyword">str</span>[i]&lt;=<span class="string">'z'</span>)</span><br><span class="line">                            &#123;</span><br><span class="line">                                mp[<span class="keyword">cnt</span>++]=<span class="keyword">str</span>[i]-<span class="string">'a'</span><span class="comment">;</span></span><br><span class="line">                                indegree[<span class="keyword">str</span>[i]-<span class="string">'a'</span>]=<span class="number">0</span><span class="comment">;</span></span><br><span class="line">                            &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span><span class="comment">;i&lt;26;i++)</span></span><br><span class="line">                    &#123;</span><br><span class="line">                        <span class="keyword">if</span>(indegree[i]==<span class="number">0</span>)</span><br><span class="line">                            totnum++<span class="comment">;</span></span><br><span class="line">                    &#125;</span><br><span class="line"></span><br><span class="line">                gets(<span class="keyword">str</span>)<span class="comment">;</span></span><br><span class="line"></span><br><span class="line">                len=<span class="keyword">strlen</span>(<span class="keyword">str</span>)<span class="comment">;</span></span><br><span class="line">                <span class="keyword">cnt</span>=<span class="number">0</span><span class="comment">;</span></span><br><span class="line"></span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span><span class="comment">;i&lt;len;i++)</span></span><br><span class="line">                    &#123;</span><br><span class="line">                        <span class="keyword">if</span>(<span class="keyword">str</span>[i]&gt;=<span class="string">'a'</span> &amp;&amp; <span class="keyword">str</span>[i]&lt;=<span class="string">'z'</span>)</span><br><span class="line">                            &#123;</span><br><span class="line">                                <span class="keyword">cnt</span>++<span class="comment">;</span></span><br><span class="line">                                <span class="keyword">if</span>(<span class="keyword">cnt</span>==<span class="number">2</span>)</span><br><span class="line">                                    &#123;</span><br><span class="line">                                        <span class="keyword">cnt</span>=<span class="number">0</span><span class="comment">;</span></span><br><span class="line">                                        edge[<span class="keyword">str</span>[i<span class="number">-2</span>]-<span class="string">'a'</span>].push_back(<span class="keyword">str</span>[i]-<span class="string">'a'</span>)<span class="comment">;</span></span><br><span class="line">                                        indegree[<span class="keyword">str</span>[i]-<span class="string">'a'</span>]++<span class="comment">;</span></span><br><span class="line">                                    &#125;</span><br><span class="line">                            &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                dfs(<span class="number">0</span>)<span class="comment">;</span></span><br><span class="line">                printf(<span class="string">"\n"</span>)<span class="comment">;</span></span><br><span class="line">            &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -391,8 +412,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/09/06/poj 1128 Frame Stacking/" rel="prev" title="poj 1128 Frame Stacking">
-                poj 1128 Frame Stacking <i class="fa fa-chevron-right"></i>
+              <a href="/2018/09/06/南京网络赛G/" rel="prev" title="南京网络赛G">
+                南京网络赛G <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -422,6 +443,9 @@
 
           
 
+  
+    <div class="comments" id="comments">
+    </div>
   
 
 
@@ -694,6 +718,28 @@
 
 
 
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'IVAeeTjrkksxaafzG5rbbt4J-gzGzoHsz',
+        appKey: 'SAcjIefy4DH7j95l33eP7Sdt',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
 
 
   
@@ -703,6 +749,113 @@
 
 
   
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("IVAeeTjrkksxaafzG5rbbt4J-gzGzoHsz", "SAcjIefy4DH7j95l33eP7Sdt");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
 
   
 
