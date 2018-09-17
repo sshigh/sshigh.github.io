@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="#Description 未名湖附近共有N个大小湖泊L1, L2, …, Ln(其中包括未名湖)，每个湖泊Li里住着一只青蛙Fi(1 ≤ i ≤ N)。如果湖泊Li和Lj之间有水路相连，则青蛙Fi和Fj互称为邻居。现在已知每只青蛙的邻居数目x1, x2, …, xn，请你给出每两个湖泊之间的相连关系。 #Input 第一行是测试数据的组数T(0 ≤ T ≤ 20)。每组数据包括两行，第一行是整数N">
+<meta name="description" content="#题解  拓扑排序裸题  跟poj1128实际上差不多  但是上一题的建图还要更加的复杂  这道题的建图就比较裸一点  因为是按照字典序输出的，所以要用dfs()  具体看代码就行 #链接poj 1270 #代码 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051">
 <meta property="og:type" content="article">
-<meta property="og:title" content="poj 1659 Frog&#39;s Neighborhood">
-<meta property="og:url" content="http://yoursite.com/2018/09/06/poj 1659 Frog'sNeighborhood/index.html">
+<meta property="og:title" content="poj 1270 Following Orders">
+<meta property="og:url" content="http://yoursite.com/2018/09/06/poj 1270 Following Orders/index.html">
 <meta property="og:site_name" content="sshigh&#39;s blog">
-<meta property="og:description" content="#Description 未名湖附近共有N个大小湖泊L1, L2, …, Ln(其中包括未名湖)，每个湖泊Li里住着一只青蛙Fi(1 ≤ i ≤ N)。如果湖泊Li和Lj之间有水路相连，则青蛙Fi和Fj互称为邻居。现在已知每只青蛙的邻居数目x1, x2, …, xn，请你给出每两个湖泊之间的相连关系。 #Input 第一行是测试数据的组数T(0 ≤ T ≤ 20)。每组数据包括两行，第一行是整数N">
+<meta property="og:description" content="#题解  拓扑排序裸题  跟poj1128实际上差不多  但是上一题的建图还要更加的复杂  这道题的建图就比较裸一点  因为是按照字典序输出的，所以要用dfs()  具体看代码就行 #链接poj 1270 #代码 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-11T12:23:31.140Z">
+<meta property="og:updated_time" content="2018-09-17T13:17:06.420Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="poj 1659 Frog&#39;s Neighborhood">
-<meta name="twitter:description" content="#Description 未名湖附近共有N个大小湖泊L1, L2, …, Ln(其中包括未名湖)，每个湖泊Li里住着一只青蛙Fi(1 ≤ i ≤ N)。如果湖泊Li和Lj之间有水路相连，则青蛙Fi和Fj互称为邻居。现在已知每只青蛙的邻居数目x1, x2, …, xn，请你给出每两个湖泊之间的相连关系。 #Input 第一行是测试数据的组数T(0 ≤ T ≤ 20)。每组数据包括两行，第一行是整数N">
+<meta name="twitter:title" content="poj 1270 Following Orders">
+<meta name="twitter:description" content="#题解  拓扑排序裸题  跟poj1128实际上差不多  但是上一题的建图还要更加的复杂  这道题的建图就比较裸一点  因为是按照字典序输出的，所以要用dfs()  具体看代码就行 #链接poj 1270 #代码 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/09/06/poj 1659 Frog'sNeighborhood/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/09/06/poj 1270 Following Orders/"/>
 
 
 
 
 
-  <title>poj 1659 Frog's Neighborhood | sshigh's blog</title>
+  <title>poj 1270 Following Orders | sshigh's blog</title>
   
 
 
@@ -253,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/06/poj 1659 Frog'sNeighborhood/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/06/poj 1270 Following Orders/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="sshigh">
@@ -270,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">poj 1659 Frog's Neighborhood</h1>
+          <h1 class="post-title" itemprop="name headline">poj 1270 Following Orders</h1>
         
 
         <div class="post-meta">
@@ -316,8 +316,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/图论/Havel-Hakimi定理/" itemprop="url" rel="index">
-                    <span itemprop="name">Havel-Hakimi定理</span>
+                  <a href="/categories/图论/拓扑排序/" itemprop="url" rel="index">
+                    <span itemprop="name">拓扑排序</span>
                   </a>
                 </span>
 
@@ -353,100 +353,11 @@
       
 
       
-        <p>#<strong>Description</strong></p>
-<p>未名湖附近共有N个大小湖泊L1, L2, …, Ln(其中包括未名湖)，每个湖泊Li里住着一只青蛙Fi(1 ≤ i ≤ N)。如果湖泊Li和Lj之间有水路相连，则青蛙Fi和Fj互称为邻居。现在已知每只青蛙的邻居数目x1, x2, …, xn，请你给出每两个湖泊之间的相连关系。</p>
-<p>#<strong>Input</strong></p>
-<p>第一行是测试数据的组数T(0 ≤ T ≤ 20)。每组数据包括两行，第一行是整数N(2 &lt; N &lt; 10)，第二行是N个整数，x1, x2,…, xn(0 ≤ xi ≤ N)。</p>
-<p>#<strong>Output</strong></p>
-<p>对输入的每组测试数据，如果不存在可能的相连关系，输出”NO”。否则输出”YES”，并用N×N的矩阵表示湖泊间的相邻关系，即如果湖泊i与湖泊j之间有水路相连，则第i行的第j个数字为1，否则为0。每两个数字之间输出一个空格。如果存在多种可能，只需给出一种符合条件的情形。相邻两组测试数据之间输出一个空行。</p>
-<p>#<strong>Sample Input</strong></p>
-<p>3<br>7<br>4 3 1 5 4 2 1<br>6<br>4 3 1 4 2 0<br>6<br>2 3 1 1 2 1 </p>
-<p>#<strong>Sample Output</strong></p>
-<p>YES<br>0 1 0 1 1 0 1<br>1 0 0 1 1 0 0<br>0 0 0 1 0 0 0<br>1 1 1 0 1 1 0<br>1 1 0 1 0 1 0<br>0 0 0 1 1 0 0<br>1 0 0 0 0 0 0 </p>
-<p>NO</p>
-<p>YES<br>0 1 0 0 1 0<br>1 0 0 1 1 0<br>0 0 0 0 0 1<br>0 1 0 0 0 0<br>1 1 0 0 0 0<br>0 0 1 0 0 0 </p>
-<p>#<strong>Source</strong></p>
-<p>POJ Monthly–2004.05.15 Alcyone@pku</p>
-<pre><code>#include &lt;iostream&gt;
-#include &lt;cstdio&gt;
-#include &lt;cstring&gt;
-#include &lt;algorithm&gt;
-using namespace std;
+        <p>#<strong>题解</strong><br>  拓扑排序裸题<br>  跟poj1128实际上差不多<br>  但是上一题的建图还要更加的复杂<br>  这道题的建图就比较裸一点<br>  因为是按照字典序输出的，所以要用dfs()<br>  具体看代码就行</p>
+<p>#<strong>链接</strong><a href="">poj 1270</a></p>
+<p>#<strong>代码</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;cstdio&gt;</span><br><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;stack&gt;</span><br><span class="line">#include &lt;cstring&gt;</span><br><span class="line">#include &lt;vector&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">const int maxn=1010;</span><br><span class="line">char str[maxn];</span><br><span class="line">int totnum;</span><br><span class="line">int mp[maxn];</span><br><span class="line">int indegree[maxn];</span><br><span class="line">int n,m;</span><br><span class="line">char ans[maxn];</span><br><span class="line">vector&lt;int&gt;edge[maxn];</span><br><span class="line"></span><br><span class="line">void dfs(int len)</span><br><span class="line">    &#123;</span><br><span class="line">        if(len==totnum)</span><br><span class="line">            &#123;</span><br><span class="line">                ans[len]=&apos;\0&apos;;</span><br><span class="line">                printf(&quot;%s\n&quot;,ans);</span><br><span class="line">                return ;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        for (int i=0;i&lt;26;i++)</span><br><span class="line">            &#123;</span><br><span class="line">                if(indegree[i]==0)</span><br><span class="line">                    &#123;</span><br><span class="line">                        ans[len]=i+&apos;a&apos;;</span><br><span class="line">                        indegree[i]--;</span><br><span class="line">                        for (int j=0;j&lt;edge[i].size();j++)</span><br><span class="line">                            &#123;</span><br><span class="line">                                indegree[edge[i][j]]--;</span><br><span class="line">                            &#125;</span><br><span class="line">                        dfs(len+1);</span><br><span class="line">                        for (int j=0;j&lt;edge[i].size();j++)</span><br><span class="line">                            &#123;</span><br><span class="line">                                indegree[edge[i][j]]++;</span><br><span class="line">                            &#125;</span><br><span class="line">                        indegree[i]++;</span><br><span class="line">                    &#125;</span><br><span class="line">            &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">    &#123;</span><br><span class="line">        while (gets(str))</span><br><span class="line">            &#123;</span><br><span class="line">                memset(indegree,-1,sizeof(indegree));</span><br><span class="line">                for (int i=0;i&lt;=26;i++)</span><br><span class="line">                    edge[i].clear();</span><br><span class="line">                totnum=0;</span><br><span class="line">                int len=strlen(str);</span><br><span class="line">                int cnt=0;</span><br><span class="line">                for (int i=0;i&lt;len;i++)</span><br><span class="line">                    &#123;</span><br><span class="line">                        if(str[i]&gt;=&apos;a&apos; &amp;&amp; str[i]&lt;=&apos;z&apos;)</span><br><span class="line">                            &#123;</span><br><span class="line">                                mp[cnt++]=str[i]-&apos;a&apos;;</span><br><span class="line">                                indegree[str[i]-&apos;a&apos;]=0;</span><br><span class="line">                            &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                for (int i=0;i&lt;26;i++)</span><br><span class="line">                    &#123;</span><br><span class="line">                        if(indegree[i]==0)</span><br><span class="line">                            totnum++;</span><br><span class="line">                    &#125;</span><br><span class="line"></span><br><span class="line">                gets(str);</span><br><span class="line"></span><br><span class="line">                len=strlen(str);</span><br><span class="line">                cnt=0;</span><br><span class="line"></span><br><span class="line">                for (int i=0;i&lt;len;i++)</span><br><span class="line">                    &#123;</span><br><span class="line">                        if(str[i]&gt;=&apos;a&apos; &amp;&amp; str[i]&lt;=&apos;z&apos;)</span><br><span class="line">                            &#123;</span><br><span class="line">                                cnt++;</span><br><span class="line">                                if(cnt==2)</span><br><span class="line">                                    &#123;</span><br><span class="line">                                        cnt=0;</span><br><span class="line">                                        edge[str[i-2]-&apos;a&apos;].push_back(str[i]-&apos;a&apos;);</span><br><span class="line">                                        indegree[str[i]-&apos;a&apos;]++;</span><br><span class="line">                                    &#125;</span><br><span class="line">                            &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                dfs(0);</span><br><span class="line">                printf(&quot;\n&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
-const int maxn=15;
-struct node{
-    int id;
-    int deg;
-}v[maxn];
-bool cmp(node a,node b)
-    {
-        return a.deg&gt;=b.deg;
-    }
-int e[maxn][maxn];
-
-int main()
-    {
-        int T;
-        scanf(&quot;%d&quot;,&amp;T);
-        while (T--)
-            {
-                int n;
-                scanf(&quot;%d&quot;,&amp;n);
-                for (int i=0;i&lt;n;i++)
-                    {
-                        scanf(&quot;%d&quot;,&amp;v[i].deg);
-                        v[i].id=i;
-                    }
-                int flag=1;
-                memset(e,0,sizeof(e));
-                for (int k=0;k&lt;n;k++)
-                    {
-                        sort(v+k,v+n,cmp);
-                        int id=v[k].id;
-                        int d1=v[k].deg;
-                        if(d1&gt;n-k-1)
-                            {
-                                flag=0;
-                                continue;
-                            }
-                        for (int mm=1;mm&lt;=v[k].deg;mm++)
-                            {
-                                int j=v[k+mm].id;
-                                if(v[k+mm].deg&lt;=0)
-                                    {
-                                        flag=0;
-                                        break;
-                                    }
-                                v[k+mm].deg--;
-                                e[id][j]=e[j][id]=1;
-                            }
-                    }
-                if(!flag)
-                    {
-                        cout&lt;&lt;&quot;NO&quot;&lt;&lt;endl;
-                        //cout&lt;&lt;endl;
-                        //continue;
-                    }
-                else
-                    {
-                        cout&lt;&lt;&quot;YES&quot;&lt;&lt;endl;
-                        for (int i=0;i&lt;n;i++)
-                            {
-                                for (int j=0;j&lt;n;j++)
-                                    {
-                                        if(j) printf(&quot; &quot;);
-                                        printf(&quot;%d&quot;,e[i][j]);
-                                    }
-                                puts(&quot;&quot;);
-                            }
-                    // puts(&quot;&quot;);
-                    }
-                if(T)
-                    puts(&quot;&quot;);
-            }
-        return 0;
-    }
-</code></pre>
       
     </div>
     
@@ -470,8 +381,8 @@ int main()
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/09/06/南京网络赛G/" rel="next" title="南京网络赛G">
-                <i class="fa fa-chevron-left"></i> 南京网络赛G
+              <a href="/2018/09/06/poj 1659 Frog'sNeighborhood/" rel="next" title="poj 1659 Frog's Neighborhood">
+                <i class="fa fa-chevron-left"></i> poj 1659 Frog's Neighborhood
               </a>
             
           </div>
@@ -480,8 +391,8 @@ int main()
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/09/06/poj 1270 Following Orders/" rel="prev" title="poj 1270 Following Orders">
-                poj 1270 Following Orders <i class="fa fa-chevron-right"></i>
+              <a href="/2018/09/06/poj 1128 Frame Stacking/" rel="prev" title="poj 1128 Frame Stacking">
+                poj 1128 Frame Stacking <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
