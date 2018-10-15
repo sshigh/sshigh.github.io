@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="#Description 未名湖附近共有N个大小湖泊L1, L2, …, Ln(其中包括未名湖)，每个湖泊Li里住着一只青蛙Fi(1 ≤ i ≤ N)。如果湖泊Li和Lj之间有水路相连，则青蛙Fi和Fj互称为邻居。现在已知每只青蛙的邻居数目x1, x2, …, xn，请你给出每两个湖泊之间的相连关系。 #Input 第一行是测试数据的组数T(0 ≤ T ≤ 20)。每组数据包括两行，第一行是整数N">
+<meta name="description" content="Description未名湖附近共有N个大小湖泊L1, L2, …, Ln(其中包括未名湖)，每个湖泊Li里住着一只青蛙Fi(1 ≤ i ≤ N)。如果湖泊Li和Lj之间有水路相连，则青蛙Fi和Fj互称为邻居。现在已知每只青蛙的邻居数目x1, x2, …, xn，请你给出每两个湖泊之间的相连关系。 Input第一行是测试数据的组数T(0 ≤ T ≤ 20)。每组数据包括两行，第一行是整数N(2 &amp;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="poj 1659 Frog&#39;s Neighborhood">
 <meta property="og:url" content="http://yoursite.com/2018/09/06/poj 1659 Frog'sNeighborhood/index.html">
 <meta property="og:site_name" content="sshigh&#39;s blog">
-<meta property="og:description" content="#Description 未名湖附近共有N个大小湖泊L1, L2, …, Ln(其中包括未名湖)，每个湖泊Li里住着一只青蛙Fi(1 ≤ i ≤ N)。如果湖泊Li和Lj之间有水路相连，则青蛙Fi和Fj互称为邻居。现在已知每只青蛙的邻居数目x1, x2, …, xn，请你给出每两个湖泊之间的相连关系。 #Input 第一行是测试数据的组数T(0 ≤ T ≤ 20)。每组数据包括两行，第一行是整数N">
+<meta property="og:description" content="Description未名湖附近共有N个大小湖泊L1, L2, …, Ln(其中包括未名湖)，每个湖泊Li里住着一只青蛙Fi(1 ≤ i ≤ N)。如果湖泊Li和Lj之间有水路相连，则青蛙Fi和Fj互称为邻居。现在已知每只青蛙的邻居数目x1, x2, …, xn，请你给出每两个湖泊之间的相连关系。 Input第一行是测试数据的组数T(0 ≤ T ≤ 20)。每组数据包括两行，第一行是整数N(2 &amp;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-17T15:30:50.722Z">
+<meta property="og:updated_time" content="2018-10-15T10:50:20.928Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="poj 1659 Frog&#39;s Neighborhood">
-<meta name="twitter:description" content="#Description 未名湖附近共有N个大小湖泊L1, L2, …, Ln(其中包括未名湖)，每个湖泊Li里住着一只青蛙Fi(1 ≤ i ≤ N)。如果湖泊Li和Lj之间有水路相连，则青蛙Fi和Fj互称为邻居。现在已知每只青蛙的邻居数目x1, x2, …, xn，请你给出每两个湖泊之间的相连关系。 #Input 第一行是测试数据的组数T(0 ≤ T ≤ 20)。每组数据包括两行，第一行是整数N">
+<meta name="twitter:description" content="Description未名湖附近共有N个大小湖泊L1, L2, …, Ln(其中包括未名湖)，每个湖泊Li里住着一只青蛙Fi(1 ≤ i ≤ N)。如果湖泊Li和Lj之间有水路相连，则青蛙Fi和Fj互称为邻居。现在已知每只青蛙的邻居数目x1, x2, …, xn，请你给出每两个湖泊之间的相连关系。 Input第一行是测试数据的组数T(0 ≤ T ≤ 20)。每组数据包括两行，第一行是整数N(2 &amp;">
 
 
 
@@ -374,16 +374,11 @@
       
 
       
-        <p>#<strong>Description</strong></p>
-<p>未名湖附近共有N个大小湖泊L1, L2, …, Ln(其中包括未名湖)，每个湖泊Li里住着一只青蛙Fi(1 ≤ i ≤ N)。如果湖泊Li和Lj之间有水路相连，则青蛙Fi和Fj互称为邻居。现在已知每只青蛙的邻居数目x1, x2, …, xn，请你给出每两个湖泊之间的相连关系。</p>
-<p>#<strong>Input</strong></p>
-<p>第一行是测试数据的组数T(0 ≤ T ≤ 20)。每组数据包括两行，第一行是整数N(2 &lt; N &lt; 10)，第二行是N个整数，x1, x2,…, xn(0 ≤ xi ≤ N)。</p>
-<p>#<strong>Output</strong></p>
-<p>对输入的每组测试数据，如果不存在可能的相连关系，输出”NO”。否则输出”YES”，并用N×N的矩阵表示湖泊间的相邻关系，即如果湖泊i与湖泊j之间有水路相连，则第i行的第j个数字为1，否则为0。每两个数字之间输出一个空格。如果存在多种可能，只需给出一种符合条件的情形。相邻两组测试数据之间输出一个空行。</p>
-<p>#<strong>Sample Input</strong></p>
-<p>3<br>7<br>4 3 1 5 4 2 1<br>6<br>4 3 1 4 2 0<br>6<br>2 3 1 1 2 1 </p>
-<p>#<strong>Sample Output</strong></p>
-<p>YES<br>0 1 0 1 1 0 1<br>1 0 0 1 1 0 0<br>0 0 0 1 0 0 0<br>1 1 1 0 1 1 0<br>1 1 0 1 0 1 0<br>0 0 0 1 1 0 0<br>1 0 0 0 0 0 0 </p>
+        <h1 id="Description"><a href="#Description" class="headerlink" title="Description"></a><strong>Description</strong></h1><p>未名湖附近共有N个大小湖泊L1, L2, …, Ln(其中包括未名湖)，每个湖泊Li里住着一只青蛙Fi(1 ≤ i ≤ N)。如果湖泊Li和Lj之间有水路相连，则青蛙Fi和Fj互称为邻居。现在已知每只青蛙的邻居数目x1, x2, …, xn，请你给出每两个湖泊之间的相连关系。</p>
+<h1 id="Input"><a href="#Input" class="headerlink" title="Input"></a><strong>Input</strong></h1><p>第一行是测试数据的组数T(0 ≤ T ≤ 20)。每组数据包括两行，第一行是整数N(2 &lt; N &lt; 10)，第二行是N个整数，x1, x2,…, xn(0 ≤ xi ≤ N)。</p>
+<h1 id="Output"><a href="#Output" class="headerlink" title="Output"></a><strong>Output</strong></h1><p>对输入的每组测试数据，如果不存在可能的相连关系，输出”NO”。否则输出”YES”，并用N×N的矩阵表示湖泊间的相邻关系，即如果湖泊i与湖泊j之间有水路相连，则第i行的第j个数字为1，否则为0。每两个数字之间输出一个空格。如果存在多种可能，只需给出一种符合条件的情形。相邻两组测试数据之间输出一个空行。</p>
+<h1 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a><strong>Sample Input</strong></h1><p>3<br>7<br>4 3 1 5 4 2 1<br>6<br>4 3 1 4 2 0<br>6<br>2 3 1 1 2 1 </p>
+<h1 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a><strong>Sample Output</strong></h1><p>YES<br>0 1 0 1 1 0 1<br>1 0 0 1 1 0 0<br>0 0 0 1 0 0 0<br>1 1 1 0 1 1 0<br>1 1 0 1 0 1 0<br>0 0 0 1 1 0 0<br>1 0 0 0 0 0 0 </p>
 <p>NO</p>
 <p>YES<br>0 1 0 0 1 0<br>1 0 0 1 1 0<br>0 0 0 0 0 1<br>0 1 0 0 0 0<br>1 1 0 0 0 0<br>0 0 1 0 0 0 </p>
 <p>#<strong>Source</strong></p>
@@ -412,8 +407,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/09/05/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2018/09/06/南京网络赛G/" rel="next" title="南京网络赛G">
+                <i class="fa fa-chevron-left"></i> 南京网络赛G
               </a>
             
           </div>
@@ -479,8 +474,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -499,7 +503,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -545,6 +549,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Description"><span class="nav-number">1.</span> <span class="nav-text">Description</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Input"><span class="nav-number">2.</span> <span class="nav-text">Input</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Output"><span class="nav-number">3.</span> <span class="nav-text">Output</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Sample-Input"><span class="nav-number">4.</span> <span class="nav-text">Sample Input</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Sample-Output"><span class="nav-number">5.</span> <span class="nav-text">Sample Output</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
