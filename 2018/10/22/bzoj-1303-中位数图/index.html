@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="题解  拓扑排序裸题  跟poj1128实际上差不多  但是上一题的建图还要更加的复杂  这道题的建图就比较裸一点  因为是按照字典序输出的，所以要用dfs()  具体看代码就行 链接poj 1270代码12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535">
+<meta name="description" content="Description给出1~n的一个排列，统计该排列有多少个长度为奇数的连续子序列的中位数是b。中位数是指把所有元素从小到大排列后，位于中间的数。 Input第一行为两个正整数n和b ，第二行为1~n 的排列。 Output输出一个整数，即中位数为b的连续子序列个数。 Sample Input7 45 7 2 4 3 1 6 Sample Output4 HINT第三个样例解释：{4}, {7,">
 <meta property="og:type" content="article">
-<meta property="og:title" content="poj 1270 Following Orders">
-<meta property="og:url" content="http://yoursite.com/2018/09/06/poj 1270 Following Orders/index.html">
+<meta property="og:title" content="bzoj 1303 中位数图">
+<meta property="og:url" content="http://yoursite.com/2018/10/22/bzoj-1303-中位数图/index.html">
 <meta property="og:site_name" content="sshigh&#39;s blog">
-<meta property="og:description" content="题解  拓扑排序裸题  跟poj1128实际上差不多  但是上一题的建图还要更加的复杂  这道题的建图就比较裸一点  因为是按照字典序输出的，所以要用dfs()  具体看代码就行 链接poj 1270代码12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535">
+<meta property="og:description" content="Description给出1~n的一个排列，统计该排列有多少个长度为奇数的连续子序列的中位数是b。中位数是指把所有元素从小到大排列后，位于中间的数。 Input第一行为两个正整数n和b ，第二行为1~n 的排列。 Output输出一个整数，即中位数为b的连续子序列个数。 Sample Input7 45 7 2 4 3 1 6 Sample Output4 HINT第三个样例解释：{4}, {7,">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-15T10:50:10.777Z">
+<meta property="og:updated_time" content="2018-10-22T03:43:47.544Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="poj 1270 Following Orders">
-<meta name="twitter:description" content="题解  拓扑排序裸题  跟poj1128实际上差不多  但是上一题的建图还要更加的复杂  这道题的建图就比较裸一点  因为是按照字典序输出的，所以要用dfs()  具体看代码就行 链接poj 1270代码12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535">
+<meta name="twitter:title" content="bzoj 1303 中位数图">
+<meta name="twitter:description" content="Description给出1~n的一个排列，统计该排列有多少个长度为奇数的连续子序列的中位数是b。中位数是指把所有元素从小到大排列后，位于中间的数。 Input第一行为两个正整数n和b ，第二行为1~n 的排列。 Output输出一个整数，即中位数为b的连续子序列个数。 Sample Input7 45 7 2 4 3 1 6 Sample Output4 HINT第三个样例解释：{4}, {7,">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/09/06/poj 1270 Following Orders/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/10/22/bzoj-1303-中位数图/"/>
 
 
 
 
 
-  <title>poj 1270 Following Orders | sshigh's blog</title>
+  <title>bzoj 1303 中位数图 | sshigh's blog</title>
   
 
 
@@ -248,12 +248,12 @@
   
   
 
-  <article class="post post-type-categoties" itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/06/poj 1270 Following Orders/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/22/bzoj-1303-中位数图/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="sshigh">
@@ -270,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">poj 1270 Following Orders</h1>
+          <h1 class="post-title" itemprop="name headline">bzoj 1303 中位数图</h1>
         
 
         <div class="post-meta">
@@ -282,8 +282,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-06T18:10:06+08:00">
-                2018-09-06
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-22T11:30:12+08:00">
+                2018-10-22
               </time>
             
 
@@ -305,19 +305,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/图论/" itemprop="url" rel="index">
-                    <span itemprop="name">图论</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/图论/拓扑排序/" itemprop="url" rel="index">
-                    <span itemprop="name">拓扑排序</span>
+                  <a href="/categories/前缀和/" itemprop="url" rel="index">
+                    <span itemprop="name">前缀和</span>
                   </a>
                 </span>
 
@@ -334,8 +323,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/09/06/poj 1270 Following Orders/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/09/06/poj 1270 Following Orders/" itemprop="commentCount"></span>
+                <a href="/2018/10/22/bzoj-1303-中位数图/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/10/22/bzoj-1303-中位数图/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -343,7 +332,7 @@
 
           
           
-             <span id="/2018/09/06/poj 1270 Following Orders/" class="leancloud_visitors" data-flag-title="poj 1270 Following Orders">
+             <span id="/2018/10/22/bzoj-1303-中位数图/" class="leancloud_visitors" data-flag-title="bzoj 1303 中位数图">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -374,8 +363,14 @@
       
 
       
-        <h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a><strong>题解</strong></h1><p>  拓扑排序裸题<br>  跟poj1128实际上差不多<br>  但是上一题的建图还要更加的复杂<br>  这道题的建图就比较裸一点<br>  因为是按照字典序输出的，所以要用dfs()<br>  具体看代码就行</p>
-<h1 id="链接poj-1270"><a href="#链接poj-1270" class="headerlink" title="链接poj 1270"></a><strong>链接</strong><a href="http://poj.org/problem?id=1270" target="_blank" rel="noopener">poj 1270</a></h1><h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a><strong>代码</strong></h1><figure class="highlight hsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> &lt;cstdio&gt;</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> &lt;iostream&gt;</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> &lt;stack&gt;</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> &lt;cstring&gt;</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> &lt;vector&gt;</span></span><br><span class="line">using namespace std<span class="comment">;</span></span><br><span class="line"></span><br><span class="line">const <span class="keyword">int</span> maxn=<span class="number">1010</span><span class="comment">;</span></span><br><span class="line">char <span class="keyword">str</span>[maxn]<span class="comment">;</span></span><br><span class="line"><span class="keyword">int</span> totnum<span class="comment">;</span></span><br><span class="line"><span class="keyword">int</span> mp[maxn]<span class="comment">;</span></span><br><span class="line"><span class="keyword">int</span> indegree[maxn]<span class="comment">;</span></span><br><span class="line"><span class="keyword">int</span> n,m<span class="comment">;</span></span><br><span class="line">char ans[maxn]<span class="comment">;</span></span><br><span class="line">vector&lt;<span class="keyword">int</span>&gt;edge[maxn]<span class="comment">;</span></span><br><span class="line"></span><br><span class="line">void dfs(<span class="keyword">int</span> len)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(len==totnum)</span><br><span class="line">            &#123;</span><br><span class="line">                ans[len]=<span class="string">'\0'</span><span class="comment">;</span></span><br><span class="line">                printf(<span class="string">"%s\n"</span>,ans)<span class="comment">;</span></span><br><span class="line">                <span class="keyword">return</span> <span class="comment">;</span></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span><span class="comment">;i&lt;26;i++)</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span>(indegree[i]==<span class="number">0</span>)</span><br><span class="line">                    &#123;</span><br><span class="line">                        ans[len]=i+<span class="string">'a'</span><span class="comment">;</span></span><br><span class="line">                        indegree[i]--<span class="comment">;</span></span><br><span class="line">                        <span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span><span class="comment">;j&lt;edge[i].size();j++)</span></span><br><span class="line">                            &#123;</span><br><span class="line">                                indegree[edge[i][j]]--<span class="comment">;</span></span><br><span class="line">                            &#125;</span><br><span class="line">                        dfs(len+<span class="number">1</span>)<span class="comment">;</span></span><br><span class="line">                        <span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span><span class="comment">;j&lt;edge[i].size();j++)</span></span><br><span class="line">                            &#123;</span><br><span class="line">                                indegree[edge[i][j]]++<span class="comment">;</span></span><br><span class="line">                            &#125;</span><br><span class="line">                        indegree[i]++<span class="comment">;</span></span><br><span class="line">                    &#125;</span><br><span class="line">            &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> main()</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">while</span> (gets(<span class="keyword">str</span>))</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">memset</span>(indegree,<span class="number">-1</span>,sizeof(indegree))<span class="comment">;</span></span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span><span class="comment">;i&lt;=26;i++)</span></span><br><span class="line">                    edge[i].clear()<span class="comment">;</span></span><br><span class="line">                totnum=<span class="number">0</span><span class="comment">;</span></span><br><span class="line">                <span class="keyword">int</span> len=<span class="keyword">strlen</span>(<span class="keyword">str</span>)<span class="comment">;</span></span><br><span class="line">                <span class="keyword">int</span> <span class="keyword">cnt</span>=<span class="number">0</span><span class="comment">;</span></span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span><span class="comment">;i&lt;len;i++)</span></span><br><span class="line">                    &#123;</span><br><span class="line">                        <span class="keyword">if</span>(<span class="keyword">str</span>[i]&gt;=<span class="string">'a'</span> &amp;&amp; <span class="keyword">str</span>[i]&lt;=<span class="string">'z'</span>)</span><br><span class="line">                            &#123;</span><br><span class="line">                                mp[<span class="keyword">cnt</span>++]=<span class="keyword">str</span>[i]-<span class="string">'a'</span><span class="comment">;</span></span><br><span class="line">                                indegree[<span class="keyword">str</span>[i]-<span class="string">'a'</span>]=<span class="number">0</span><span class="comment">;</span></span><br><span class="line">                            &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span><span class="comment">;i&lt;26;i++)</span></span><br><span class="line">                    &#123;</span><br><span class="line">                        <span class="keyword">if</span>(indegree[i]==<span class="number">0</span>)</span><br><span class="line">                            totnum++<span class="comment">;</span></span><br><span class="line">                    &#125;</span><br><span class="line"></span><br><span class="line">                gets(<span class="keyword">str</span>)<span class="comment">;</span></span><br><span class="line"></span><br><span class="line">                len=<span class="keyword">strlen</span>(<span class="keyword">str</span>)<span class="comment">;</span></span><br><span class="line">                <span class="keyword">cnt</span>=<span class="number">0</span><span class="comment">;</span></span><br><span class="line"></span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span><span class="comment">;i&lt;len;i++)</span></span><br><span class="line">                    &#123;</span><br><span class="line">                        <span class="keyword">if</span>(<span class="keyword">str</span>[i]&gt;=<span class="string">'a'</span> &amp;&amp; <span class="keyword">str</span>[i]&lt;=<span class="string">'z'</span>)</span><br><span class="line">                            &#123;</span><br><span class="line">                                <span class="keyword">cnt</span>++<span class="comment">;</span></span><br><span class="line">                                <span class="keyword">if</span>(<span class="keyword">cnt</span>==<span class="number">2</span>)</span><br><span class="line">                                    &#123;</span><br><span class="line">                                        <span class="keyword">cnt</span>=<span class="number">0</span><span class="comment">;</span></span><br><span class="line">                                        edge[<span class="keyword">str</span>[i<span class="number">-2</span>]-<span class="string">'a'</span>].push_back(<span class="keyword">str</span>[i]-<span class="string">'a'</span>)<span class="comment">;</span></span><br><span class="line">                                        indegree[<span class="keyword">str</span>[i]-<span class="string">'a'</span>]++<span class="comment">;</span></span><br><span class="line">                                    &#125;</span><br><span class="line">                            &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                dfs(<span class="number">0</span>)<span class="comment">;</span></span><br><span class="line">                printf(<span class="string">"\n"</span>)<span class="comment">;</span></span><br><span class="line">            &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+        <h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a><strong>Description</strong></h2><p>给出1~n的一个排列，统计该排列有多少个长度为奇数的连续子序列的中位数是b。中位数是指把所有元素从小到大排列后，位于中间的数。</p>
+<h2 id="Input"><a href="#Input" class="headerlink" title="Input"></a><strong>Input</strong></h2><p>第一行为两个正整数n和b ，第二行为1~n 的排列。</p>
+<h2 id="Output"><a href="#Output" class="headerlink" title="Output"></a><strong>Output</strong></h2><p>输出一个整数，即中位数为b的连续子序列个数。</p>
+<h2 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a><strong>Sample Input</strong></h2><p>7 4<br>5 7 2 4 3 1 6</p>
+<h2 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a><strong>Sample Output</strong></h2><p>4</p>
+<h2 id="HINT"><a href="#HINT" class="headerlink" title="HINT"></a><strong>HINT</strong></h2><p>第三个样例解释：{4}, {7,2,4}, {5,7,2,4,3}和{5,7,2,4,3,1,6}<br>N&lt;=100000</p>
+<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a><strong>题解</strong></h2><p>把小于m的数置为-1 大于m的数置为1 然后求前缀和和后缀和<br>l[i],r[j] 其中后缀和i + 前缀和j == 0 的话就说明存在中位数图<br>因为数组下标不能为0 所以加上2<em>n<br>=&gt; j = 2</em>n-i</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a><strong>代码</strong></h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> num[<span class="number">100010</span>],sum[<span class="number">100010</span>],l[<span class="number">200010</span>],r[<span class="number">200010</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n,m,p;</span><br><span class="line">        <span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">           &#123;</span><br><span class="line">                <span class="built_in">cin</span>&gt;&gt;num[i];</span><br><span class="line">                <span class="keyword">if</span>(num[i]&gt;m) num[i]=<span class="number">1</span>;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span>(num[i]&lt;m) num[i]=<span class="number">-1</span>;</span><br><span class="line">                <span class="keyword">else</span> &#123;</span><br><span class="line">                    num[i]=<span class="number">0</span>;</span><br><span class="line">                    p=i;</span><br><span class="line">                &#125;</span><br><span class="line">           &#125;</span><br><span class="line">        l[n]=<span class="number">1</span>,r[n]=<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=p<span class="number">-1</span>;i&gt;=<span class="number">1</span>;i--)</span><br><span class="line">            &#123;</span><br><span class="line">                sum[i]=sum[i+<span class="number">1</span>]+num[i];</span><br><span class="line">                l[sum[i]+n]++;</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=p+<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">            &#123;</span><br><span class="line">                sum[i]=sum[i<span class="number">-1</span>]+num[i];</span><br><span class="line">                r[sum[i]+n]++;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">2</span>*n;i++)</span><br><span class="line">            &#123;</span><br><span class="line">                ans+=l[i]*r[<span class="number">2</span>*n-i];</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,ans);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -400,8 +395,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/09/05/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2018/10/22/bzoj-3039-玉蟾宫/" rel="next" title="bzoj 3039 玉蟾宫">
+                <i class="fa fa-chevron-left"></i> bzoj 3039 玉蟾宫
               </a>
             
           </div>
@@ -409,10 +404,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/09/06/poj 1128 Frame Stacking/" rel="prev" title="poj 1128 Frame Stacking">
-                poj 1128 Frame Stacking <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -552,7 +543,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#题解"><span class="nav-number">1.</span> <span class="nav-text">题解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#链接poj-1270"><span class="nav-number">2.</span> <span class="nav-text">链接poj 1270</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码"><span class="nav-number">3.</span> <span class="nav-text">代码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Description"><span class="nav-number">1.</span> <span class="nav-text">Description</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Input"><span class="nav-number">2.</span> <span class="nav-text">Input</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Output"><span class="nav-number">3.</span> <span class="nav-text">Output</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sample-Input"><span class="nav-number">4.</span> <span class="nav-text">Sample Input</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sample-Output"><span class="nav-number">5.</span> <span class="nav-text">Sample Output</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HINT"><span class="nav-number">6.</span> <span class="nav-text">HINT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#题解"><span class="nav-number">7.</span> <span class="nav-text">题解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#代码"><span class="nav-number">7.1.</span> <span class="nav-text">代码</span></a></li></ol></li></ol></div>
             
 
           </div>
